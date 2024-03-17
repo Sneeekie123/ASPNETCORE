@@ -1,0 +1,72 @@
+﻿@{
+    bool isRoot = Context.Request.Path.Value!.Equals("/");
+}
+
+
+<header>
+    <div class="container">
+    <a href="/" id="logo">
+        <img src="/Icons/Silicon-Logotype.svg" alt="Silicon-Logotype">
+    </a>
+
+
+    <div id="menu">
+        <nav>
+            <a class="menu-link" asp-page="@(isRoot ? "#tool" : "/index")">Overview</a>
+            <a class="menu-link" asp-page="@(isRoot ? "#manage-page" : "/index#manage-page")">Featuers</a>
+            <a class="menu-link" href="Courses.html">Courses</a>
+        </nav>
+    </div>
+
+
+    <div class="btn-switch">
+        <span>Light</span>
+        <div class="switch">
+            <input type="checkbox" id="switch" role="switch">
+            <label for="switch" class="slider round"></label>
+        </div>
+        <span>Dark</span>
+    </div>
+
+    <div class="account-buttons">
+        <a href="Sign-in">
+            <button class="btn-gray">Sign in</button>
+        </a>
+        <a href="Sign-up">
+            <button class="btn-theme">Sign up</button>
+        </a>
+    </div>
+
+    <div class="btn-mobile">
+        <button class="btn" id="mobile-menu-btn" aria-controls="btn-switch"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    </div>
+
+    <div id="mobile-menu" aria-expanded="false">
+
+        <div class="btn-switch">
+            <span>Light</span>
+            <div class="switch">
+                <input type="checkbox" id="switch" role="switch">
+                <label for="switch" class="slider round"></label>
+            </div>
+            <span>Dark</span>
+        </div>
+
+        <div class="account-buttons">
+            <a href="Sign-in">
+                <button class="btn-gray">Sign in</button>
+            </a>
+            <a href="Sign-up">
+                <button class="btn-theme">Sign up</button>
+            </a>
+        </div>
+
+
+        <nav>
+            <a class="menu-link" href="#">Overview</a>
+            <a class="menu-link" href="#">Featuers</a>
+            <a class="menu-link" href="#">Courses</a>
+        </nav>
+    </div>
+</header>

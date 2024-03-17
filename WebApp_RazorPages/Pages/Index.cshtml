@@ -1,0 +1,179 @@
+﻿@page
+@model WebApp_RazorPages.Pages.IndexModel
+@{
+    ViewData["Title"] = "Overview";
+}
+
+<section id="main">
+    <div class="startpage container">
+        <div id="management">
+            <h1>Task Management Assistant You Gonna Love</h1>
+            <h5>
+                We offer you a new generation of task management system.
+                Plan, manage & track all your tasks in one flexible tool.
+            </h5>
+            <button class="purple-btn">Get started for free</button>
+            <h5 id="bold">Largest companies use our tool to work efficiently</h5>
+            <img src="/Icons/logoipsum.svg" alt="">
+            <img src="/Icons/logoipsum2.svg" alt="">
+            <img src="/Icons/logoipsum3.svg" alt="">
+            <img id="logoipsum" src="/Icons/logoipsum4.svg" alt="">
+        </div>
+    </div>
+    <div id="dashboarddiv">
+        <img src="/Images/dashboard.svg" alt="">
+    </div>
+</section>
+
+
+<section id="tool">
+    <div class="bluepage container">
+
+        <h1>What Do You Get With Our Tool?</h1>
+        <h5>Make sure all your tasks are organized so you can set the priorities and focus on important.</h5>
+    </div>
+    <div class="toolselection container">
+        <div id="toolbox" class="task">
+            <img src="/Icons/chat.svg" alt="">
+            <h3>Comments on Tasks</h3>
+            <h5>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</h5>
+        </div>
+        <div id="toolbox" class="analytics">
+            <img src="/Icons/presentation.svg" alt="">
+            <h3>Tasks Analytics</h3>
+            <h5>Non imperdiet facilisis nulla tellus Morbi scelerisque eget adipiscing vulputate.</h5>
+        </div>
+        <div id="toolbox" class="assigness">
+            <img src="/Icons/add-group.svg" alt="">
+            <h3>Multiple Assignees</h3>
+            <h5>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</h5>
+        </div>
+        <div id="toolbox" class="notifications">
+            <img src="/Icons/bell.svg" alt="">
+            <h3>Notifications</h3>
+            <h5>Diam, suspendisse velit cras ac. Lobortis diam volutpat, eget pellentesque viverra.</h5>
+        </div>
+        <div id="toolbox" class="sections">
+            <img src="/Icons/test.svg" alt="">
+            <h3>Sections & Subtasks</h3>
+            <h5>Mi feugiat hac id in. Sit elit placerat lacus nibh lorem ridiculus lectus.</h5>
+        </div>
+        <div id="toolbox" class="security">
+            <img src="/Icons/shield.svg" alt="">
+            <h3>Data Security</h3>
+            <h5>Aliquam malesuada neque eget elit nulla vestibulum nunc cras.</h5>
+        </div>
+    </div>
+</section>
+
+
+<section id="light-dark-screen">
+    <div class="light-dark-background container">
+        <div class="head">
+            <h1 class="white">Switch Between </h1>
+            <h1>Light & Dark Mode</h1>
+        </div>
+        <img src="/Images/Screen.svg" alt="">
+    </div>
+</section>
+
+
+<section id="manage-page">
+    <div class="container">
+        <div>
+            <img id="task-master" src="/Images/task-master.svg" alt="">
+        </div>
+        <div id="work">
+            <h3>Manage Your Work</h3>
+            <div id="line">
+                <img id="checkmark" src="/Icons/bx-check-circle.svg" alt="">
+                <p>Powerful project management</p>
+            </div>
+            <div id="line">
+                <img id="checkmark" src="/Icons/bx-check-circle.svg" alt="">
+                <p>Transparent work management</p>
+            </div>
+            <div id="line">
+                <img id="checkmark" src="/Icons/bx-check-circle.svg" alt="">
+                <p>Manage work & focus on the most important tasks</p>
+            </div>
+            <div id="line">
+                <img id="checkmark" src="/Icons/bx-check-circle.svg" alt="">
+                <p>Track your progress with interactive charts</p>
+            </div>
+            <div id="line">
+                <img id="checkmark" src="/Icons/bx-check-circle.svg" alt="">
+                <p>Easiest way to track time spent on tasks</p>
+            </div>
+
+            <button class="purple-btn">Learn more <img src="/Icons/Vector.png" alt=""></button>
+        </div>
+    </div>
+</section>
+
+
+<section class="apps">
+    <div class="container">
+        <img src="/Images/Apps.svg" alt="">
+    </div>
+</section>
+
+
+<section class="email-subscription">
+    <div class="container">
+        <div id="head">
+            <h1>Don't Want to Miss Anything?</h1>
+            <img src="/Icons/arrows.svg" alt="">
+        </div>
+        <div class="grid container">
+            <div id="sign-up" class="box">
+                <h3>Sign up for <br> Newsletters</h3>
+            </div>
+            <div class="block">
+                <div id="daily" class="box">
+                    <input type="checkbox" id="checkbox">
+                    <p>Daily Newsletter</p>
+                </div>
+                <div id="event" class="box">
+                    <input type="checkbox">
+                    <p>Event Updates</p>
+                </div>
+            </div>
+            <div class="block">
+                <div id="advertising" class="box">
+                    <input type="checkbox">
+                    <p>Advertising Updates</p>
+                </div>
+                <div id="startup" class="box">
+                    <input type="checkbox">
+                    <p>Startups Weekly</p>
+                </div>
+            </div>
+            <div class="block">
+                <div id="week" class="box">
+                    <input type="checkbox">
+                    <p>Week in Review</p>
+                </div>
+                <div id="podcast" class="box">
+                    <input type="checkbox">
+                    <p>Podcasts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscribe container">
+            <form class="email">
+                <img src="/Icons/mail-icon.svg" alt="">
+                <input type="text" placeholder="Your Email">
+            </form>
+            <div>
+                <button class="purple-btn">
+                    Subscribe*
+                </button>
+            </div>
+        </div>
+        <div class="policy container">
+            <p>*Yes, I agree to the <a href="">terms</a> and <a href="">privacy policy.</a></p>
+        </div>
+    </div>
+</section>

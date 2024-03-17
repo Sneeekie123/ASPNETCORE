@@ -1,0 +1,61 @@
+﻿@page
+@model WebApp_RazorPages.Pages.Sign_inModel
+@{
+    ViewData["Title"] = "Sign-in";
+}
+
+
+<section class="sign-in-page">
+    <div class="container">
+        <div id="head">
+            <h1>Welcome Back</h1>
+            <p>Don't have an account yet? <a href="">Sing up here</a></p>
+        </div>
+
+        <div>
+            <h5>Email</h5>
+            <form action="">
+                <input type="text" placeholder="Enter your email address">
+            </form>
+        </div>
+        <div>
+            <h5>Password</h5>
+            <form action="">
+                <input type="text" placeholder="*********">
+            </form>
+        </div>
+        <div class="flex">
+            <form action="">
+                <input type="checkbox" name="" id="">
+            </form>
+            <p>Remember me</p>
+        </div>
+        <div>
+            <button class="purple-btn">Sign in</button>
+        </div>
+        <div>
+            <a href="" id="forgot-password">Forgot your password?</a>
+        </div>
+        <div class="social-network">
+            <hr>
+            <p>Or sign in with your social network</p>
+        </div>
+        <div class="buttons">
+            <div class="gray-box">
+                <button class="btn-gray">
+                    <img src="/Icons/google-icon.svg" alt="">
+                    <p>Google</p>
+                </button>
+
+            </div>
+            <div class="gray-box">
+                <button class="btn-gray">
+                    <img src="/Icons/facebook-icon.svg" alt="">
+                    <p>Facebook</p>
+                </button>
+
+            </div>
+        </div>
+    </div>
+    
+</section>
