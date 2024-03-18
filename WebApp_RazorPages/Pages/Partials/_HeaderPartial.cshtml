@@ -13,8 +13,8 @@
     <div id="menu">
         <nav>
             <a class="menu-link" asp-page="@(isRoot ? "#tool" : "/index")">Overview</a>
-            <a class="menu-link" asp-page="@(isRoot ? "#manage-page" : "/index#manage-page")">Featuers</a>
-            <a class="menu-link" href="Courses.html">Courses</a>
+            <a class="menu-link" asp-page="@(isRoot ? "#manage-page" : "/index")">Featuers</a>
+            <a class="menu-link" asp-page="Courses">Courses</a>
         </nav>
     </div>
 
@@ -29,12 +29,8 @@
     </div>
 
     <div class="account-buttons">
-        <a href="Sign-in">
-            <button class="btn-gray">Sign in</button>
-        </a>
-        <a href="Sign-up">
-            <button class="btn-theme">Sign up</button>
-        </a>
+        <a asp-page="Sign-in" class="btn-gray"> Sign in </a>
+        <a asp-page="Sign-up" class="btn-theme"> Sign up </a>
     </div>
 
     <div class="btn-mobile">
@@ -54,18 +50,14 @@
         </div>
 
         <div class="account-buttons">
-            <a href="Sign-in">
-                <button class="btn-gray">Sign in</button>
-            </a>
-            <a href="Sign-up">
-                <button class="btn-theme">Sign up</button>
-            </a>
+            <a asp-page="Sign-in" class="btn-gray"> Sign in </a>
+            <a asp-page="Sign-up" class="btn-theme"> Sign up </a>
         </div>
 
 
         <nav>
-            <a class="menu-link" href="#">Overview</a>
-            <a class="menu-link" href="#">Featuers</a>
+            <a class="menu-link" asp-page="@(isRoot ? "#tool" : "/index")">Overview</a>
+            <a class="menu-link" asp-page="@(isRoot ? "#manage-page" : "/index#manage-page")">Featuers</a>
             <a class="menu-link" href="#">Courses</a>
         </nav>
     </div>
