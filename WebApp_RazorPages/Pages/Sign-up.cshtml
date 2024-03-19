@@ -2,6 +2,8 @@
 @model WebApp_RazorPages.Pages.Sign_upModel
 @{
     ViewData["Title"] = "Sign-up";
+
+    
 }
 
 
@@ -9,12 +11,12 @@
     <div class="container">
         <div>
             <h1>Create Account</h1>
-            <p>Already have an account? <a href="">Sign in here.</a></p>
+            <p>Already have an account? <a asp-page="/Sign-in">Sign in here.</a></p>
         </div>
         <div id="full-name">
             <div id="box">
                 <h5>First name</h5>
-                <form action="">
+                <form action="" method="post">
                     <input type="text" placeholder="Enter your first name">
                 </form>
             </div>
