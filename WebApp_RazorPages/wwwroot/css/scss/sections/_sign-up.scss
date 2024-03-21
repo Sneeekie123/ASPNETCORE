@@ -1,74 +1,65 @@
-.sign-up-page {
+#signup {
+    height: 100%;
 
     .container {
-        @media (max-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include lg {
+            width: 60%;
+        }
+
+        @include xl {
             width: 40%;
         }
 
-        @media (max-width: 800px) {
-            width: 50%;
-        }
 
 
-        width: 30%;
-
-       
-        margin-top: 120px;
-
-        
         form {
-           
-            input {
-                border: 1px solid #D4D7E5;
-                padding: 10px;
-                border-radius: 5px;
-                margin-bottom: 20px;
-                width: 100%;
+            padding: 1rem;
+
+            .content {
+                display: grid;
+                gap: 1rem 2rem;
+                grid-template-columns: 1fr;
+                grid-template-areas: "firstname" "lastname" "email" "password" "confirm" "terms" "button";
+
+                @include md {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "button button";
+                }
+
+                #form-firstname {
+                    grid-area: firstname;
+                }
+
+                #form-lastname {
+                    grid-area: lastname;
+                }
+
+                #form-email {
+                    grid-area: email;
+                }
+
+                #form-password {
+                    grid-area: password;
+                }
+
+                #form-confirm {
+                    grid-area: confirm;
+                }
+
+                #form-terms {
+                    grid-area: terms;
+                    padding: 1rem 0;
+                }
+
+                #form-button {
+                    grid-area: button;
+                }
             }
         }
-
-        #full-name {
-            display: flex;
-            justify-content: space-between;
-
-            #box {
-                display: block;
-                width: 48%;
-            }
-
-            
-            
-        }
-
-        .flex {
-            display: flex;
-
-            p {
-                margin-left: 10px;
-            }
-        }
-
-        .purple-btn {
-            display: block;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        
-            
-        
-    }
-
-    .foot {
-    
-        text-align: center;
-        width: 50%;
-
-       
-        p {
-
-            color: #9397AD;
-        }
-
     }
 }
