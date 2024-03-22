@@ -59,6 +59,10 @@ public class CheckBoxRequired : ValidationAttribute, IClientModelValidator
 
     public void AddValidation(ClientModelValidationContext context)
     {
+
+        // skicka iväg formuläret till en userService för registrering
+        // var result = _userService.CreateUser(From);
+
         context.Attributes.Add("data-val-checkboxrequired", FormatErrorMessage(context.ModelMetadata.GetDisplayName()));
     }
 }

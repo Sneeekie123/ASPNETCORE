@@ -5,57 +5,43 @@
 }
 
 
-<section class="sign-in-page">
+
+<section id="signin">
     <div class="container">
-        <div id="head">
+        <form method="post" novalidate>
             <h1>Welcome Back</h1>
-            <p>Don't have an account yet? <a href="">Sing up here</a></p>
-        </div>
+            <p>Don't have an account yet? <a asp-page="/Sign-up">Sign up here</a>.</p>
 
-        <div>
-            <h5>Email</h5>
-            <form action="">
-                <input type="text" placeholder="Enter your email address">
-            </form>
-        </div>
-        <div>
-            <h5>Password</h5>
-            <form action="">
-                <input type="text" placeholder="*********">
-            </form>
-        </div>
-        <div class="flex">
-            <form action="">
-                <input type="checkbox" name="" id="">
-            </form>
-            <p>Remember me</p>
-        </div>
-        <div>
-            <button class="purple-btn">Sign in</button>
-        </div>
-        <div>
-            <a href="" id="forgot-password">Forgot your password?</a>
-        </div>
-        <div class="social-network">
-            <hr>
-            <p>Or sign in with your social network</p>
-        </div>
-        <div class="buttons">
-            <div class="gray-box">
-                <button class="btn-gray">
-                    <img src="/Icons/google-icon.svg" alt="">
-                    <p>Google</p>
-                </button>
+            <div class="content">
+   
+                <div id="form-email" class="input-group">
+                    <label asp-for="@Model.Form.Email"></label>
+                    <span asp-validation-for="@Model.Form.Email"></span>
+                    <input asp-for="@Model.Form.Email">
+                </div>
+                <div id="form-password" class="input-group">
+                    <label asp-for="@Model.Form.Password"></label>
+                    <span asp-validation-for="@Model.Form.Password"></span>
+                    <input asp-for="@Model.Form.Password">
+                </div>
+            
+                <div id="form-remember" class="checkbox-group">
+                    <input asp-for="@Model.Form.RememberMe">
+                    <span asp-validation-for="@Model.Form.RememberMe"></span>
+                    <label asp-for="@Model.Form.RememberMe"></label>
+                </div>
 
+                <button id="form-button" class="btn-theme-s" type="submit">Sign in</button>
+
+                <a id="forgot-password" asp-page="/forgot">Forgot your password?</a>
+
+                <hr />
+
+                <div id="external-signin">
+                    <a class="btn-gray" asp-page="/external/google"><i class="fa-brands fa-google"></i>Google</a>
+                    <a class="btn-gray" asp-page="/external/facebook"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                </div>
             </div>
-            <div class="gray-box">
-                <button class="btn-gray">
-                    <img src="/Icons/facebook-icon.svg" alt="">
-                    <p>Facebook</p>
-                </button>
-
-            </div>
-        </div>
+        </form>
     </div>
-    
 </section>

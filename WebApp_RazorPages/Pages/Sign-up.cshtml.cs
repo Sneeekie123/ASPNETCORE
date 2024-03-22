@@ -23,6 +23,9 @@ public class Sign_upModel : PageModel
             return Page();
         }
 
+        // skicka iväg formuläret till en userService för registrering
+        // var result = _userService.SignInUser(From);
+
         return RedirectToPage("/index");
     }
 }

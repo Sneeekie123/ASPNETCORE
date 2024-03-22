@@ -1,102 +1,72 @@
-.sign-in-page {
-    
+#signin {
+    height: 100%;
+
     .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
 
-
-
-        @media (max-width: 1200px) {
-            width: 40%;
+        @include lg {
+            width: 60%;
         }
 
-        @media (max-width: 800px) {
-            width: 50%;
+        @include xl {
+            width: 35%;
         }
 
 
-        width: 30%;
-
-       
-        margin-top: 120px;
-        
 
         form {
-           
-            input {
-                border: 1px solid #D4D7E5;
-                padding: 10px;
-                border-radius: 5px;
-                margin-bottom: 20px;
-                width: 100%;
-            }
-        }
+            padding: 1rem;
 
-        .flex {
-            display: flex;
+            .content {
+                display: grid;
+                gap: 1rem 2rem;
+                grid-template-columns: 1fr;
+                grid-template-areas: "email" "password" "remember" "button" "forgot" "hr" "external";
 
-            p {
-                margin-left: 10px;
-            }
-        }
 
-        .purple-btn {
-            width: 100%;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
 
-        #forgot-password {
-            display: flex;
-            justify-content: center;
-        }
-      
-        img {
-            width: auto;
-        }
+                #form-email {
+                    grid-area: email;
+                }
 
-        .social-network {
-            
-            
-            margin-top: 30px;
-            
-            p {
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-            }
-        }
+                #form-password {
+                    grid-area: password;
+                }
 
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            .gray-box {
-                width: 48%;
 
-                .btn-gray {
-                    width: 100%;
+                #form-remember {
+                    grid-area: remember;
+                    padding: 1rem 0;
+                }
 
-                    p {
-                        margin-bottom: 0px;
+                #form-button {
+                    grid-area: button;
+                }
+
+                #forgot-password {
+                    grid-area: forgot;
+                    text-align: center;
+                    margin: 1rem 0 0 0;
+                }
+
+                hr {
+                    grid-area: hr;
+                }
+
+
+                #external-signin {
+                    grid-area: external;
+                    display: flex;
+                    gap: 1rem;
+
+                    a {
+                        flex: 1;
                     }
                 }
             }
-            
         }
-
-    
     }
-
-    .foot {
-    
-        text-align: center;
-        width: 50%;
-
-       
-        p {
-
-            color: #9397AD;
-        }
-
-    }
-
-    
 }
