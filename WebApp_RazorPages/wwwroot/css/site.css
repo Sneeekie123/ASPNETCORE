@@ -483,6 +483,20 @@ form span.field-validation-error {
   right: 0;
   color: #EF4444;
 }
+form .checkbox {
+  position: relative;
+}
+form .checkbox .field-validation-error {
+  width: 100%;
+  margin-top: 40px;
+}
+form .checkbox .input-group {
+  display: flex;
+}
+form .checkbox .input-group input {
+  margin-right: 10px;
+  margin-top: 2px;
+}
 
 header {
   padding: 15px 0;

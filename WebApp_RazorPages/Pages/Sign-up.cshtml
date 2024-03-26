@@ -40,10 +40,14 @@
                     <span asp-validation-for="@Model.Form.ConfirmPassword"></span>
                     <input asp-for="@Model.Form.ConfirmPassword">
                 </div>
-                <div id="form-terms" class="checkbox-group">
-                    <input asp-for="@Model.Form.Terms">
+                <div id="form-terms" class="checkbox">
+                    <div class="checkbox-group">
+                        <div class="input-group">
+                            <input asp-for="@Model.Form.Terms">
+                            <label asp-for="@Model.Form.Terms">I agree to the <a asp-page="/Terms">Terms</a> & <a asp-page="/Conditions">Conditions</a>.</label>
+                        </div>
+                    </div>
                     <span asp-validation-for="@Model.Form.Terms"></span>
-                    <label asp-for="@Model.Form.Terms">I agree to the <a asp-page="/Terms">Terms</a> & <a asp-page="/Conditions">Conditions</a>.</label>
                 </div>
 
                 <button id="form-button" class="btn-theme-s" type="submit">Sign up</button>
@@ -51,3 +55,5 @@
         </form>
     </div>
 </section>
+
+@await Html.PartialAsync("_ValidationScriptPartial")
