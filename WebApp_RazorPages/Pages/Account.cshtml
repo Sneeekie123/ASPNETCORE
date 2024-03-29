@@ -46,119 +46,80 @@
         </div>
 
         <div class="right-profile">
-            <div>
-                <h1>Account Details</h1>
-            </div>
-            <div>
-                <h4>Basic info</h4>
-            </div>
-
-            <div class="block-1">
-                <div class="fill-block">
-                    <h5>First name</h5>
-                    <form action="">
-                        <input type="text" placeholder="John">
-                    </form>
-                </div>
-                <div class="fill-block">
-                    <h5>Last name</h5>
-                    <form action="">
-                        <input type="text" placeholder="Doe">
-                    </form>
-                </div>
-            </div>
-
-            <div class="block-2">
-                <div class="fill-block">
-                    <h5>Email address</h5>
-                    <form action="">
-                        <input type="text" placeholder="john.doe@domain.com">
-                    </form>
-                </div>
-                <div class="fill-block">
-                    <h5>Phone</h5>
-                    <form action="">
-                        <input type="text" placeholder="Enter your phone">
-                    </form>
-                </div>
-            </div>
-
-            <div class="block-3">
-                <div class="block-4">
-                    <h5>Bio</h5>
-                    <p>(optional)</p>
-                </div>
-                <form action="">
-                    <input type="text" placeholder="Add a short bio...">
-                </form>
-            </div>
-
-            <div class="block-5">
+            <form method="post" novalidate>
                 <div>
-                    <button class="btn-gray">
-                        Cancel
-                    </button>
+                    <h1>Account Details</h1>
                 </div>
-
                 <div>
-                    <button class="purple-btn">
-                        Save changes
-                    </button>
+                    <h4>Basic info</h4>
                 </div>
 
-            </div>
+                <div class="content">
+                    <div id="form-firstname" class="input-group">
+                        <label asp-for="@Model.Form.FirstName"></label>
+                        <span asp-validation-for="@Model.Form.FirstName"></span>
+                        <input asp-for="@Model.Form.FirstName">
+                    </div>
+                    <div id="form-lastName" class="input-group">
+                        <label asp-for="@Model.Form.LastName"></label>
+                        <span asp-validation-for="@Model.Form.LastName"></span>
+                        <input asp-for="@Model.Form.LastName">
+                    </div>
+                    <div id="form-email" class="input-group">
+                        <label asp-for="@Model.Form.Email"></label>
+                        <span asp-validation-for="@Model.Form.Email"></span>
+                        <input asp-for="@Model.Form.Email">
+                    </div>
+                    <div id="form-Phone" class="input-group">
+                        <label asp-for="@Model.Form.Phone"></label>
+                        <span asp-validation-for="@Model.Form.Phone"></span>
+                        <input asp-for="@Model.Form.Phone">
+                    </div>
+                    <div id="form-Biography" class="input-group">
+                        <label asp-for="@Model.Form.Biography"></label>
+                        <span asp-validation-for="@Model.Form.Biography"></span>
+                        <input asp-for="@Model.Form.Biography">
+                    </div>
+                    <button id="form-button" class="btn-gray" type="reset">Cancel</button>
+                    <button id="form-button" class="btn-theme-s" type="submit">Save changes</button>
+                </div>
+            </form>
 
-            <div id="address">
-                <h4>Address</h4>
-            </div>
 
-            <div>
+
+            <form method="post" novalidate>
+               
                 <div>
-                    <h5>Adress line 1</h5>
-                </div>
-                <form action="">
-                    <input type="text" placeholder="Enter your address line">
-                </form>
-            </div>
-
-            <div>
-                <div>
-                    <h5>Adress line 2</h5>
-                </div>
-                <form action="">
-                    <input type="text" placeholder="Enter your second address line">
-                </form>
-            </div>
-
-
-            <div class="block-1">
-                <div class="fill-block">
-                    <h5>Postal code</h5>
-                    <form action="">
-                        <input type="text" placeholder="Enter your postal code">
-                    </form>
-                </div>
-                <div class="fill-block">
-                    <h5>City</h5>
-                    <form action="">
-                        <input type="text" placeholder="Enter your city">
-                    </form>
-                </div>
-            </div>
-
-            <div class="block-5" id="border-none">
-                <div>
-                    <button class="btn-gray">
-                        Cancel
-                    </button>
+                    <h4>Address</h4>
                 </div>
 
-                <div>
-                    <button class="purple-btn">
-                        Save changes
-                    </button>
+                <div class="content">
+                    <div id="form-Addressline_1" class="input-group">
+                        <label asp-for="@Model.Acc.Addressline_1"></label>
+                        <span asp-validation-for="@Model.Acc.Addressline_1"></span>
+                        <input asp-for="@Model.Acc.Addressline_1">
+                    </div>
+                    <div id="form-Addressline_2" class="input-group">
+                        <label asp-for="@Model.Acc.Addressline_2"></label>
+                        <span asp-validation-for="@Model.Acc.Addressline_2"></span>
+                        <input asp-for="@Model.Acc.Addressline_2">
+                    </div>
+                    <div id="form-PostalCode" class="input-group">
+                        <label asp-for="@Model.Acc.PostalCode"></label>
+                        <span asp-validation-for="@Model.Acc.PostalCode"></span>
+                        <input asp-for="@Model.Acc.PostalCode">
+                    </div>
+                    <div id="form-City" class="input-group">
+                        <label asp-for="@Model.Acc.City"></label>
+                        <span asp-validation-for="@Model.Acc.City"></span>
+                        <input asp-for="@Model.Acc.City">
+                    </div>
+                  
+                    <button id="form-button" class="btn-gray" type="reset">Cancel</button>
+                    <button id="form-button" class="btn-theme-s" type="submit">Save changes</button>
                 </div>
-            </div>
+            </form>
+
         </div>
     </div>
 </section>
