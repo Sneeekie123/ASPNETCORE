@@ -1,3 +1,4 @@
+using Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApp_RazorPages.Models;
@@ -8,7 +9,7 @@ public class Sign_inModel : PageModel
 {
 
     [BindProperty]
-    public SignInFormModel Form { get; set; } = new SignInFormModel();
+    public SignInModel Form { get; set; } = new SignInModel();
 
     public void OnGet()
     {

@@ -1,14 +1,18 @@
+using Infrastructure.Models;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebApp_RazorPages.Models;
+
 
 namespace WebApp_RazorPages.Pages;
 
-public class Sign_upModel : PageModel
+public class  Sign_upModel(UserService userService) : PageModel
 {
 
+    private readonly UserService _userService = userService;
+
     [BindProperty]
-    public SignUpFormModel Form { get; set; } = new SignUpFormModel();
+    public SignUpModel Form { get; set; } = new SignUpModel();
 
 
     public void OnGet()
@@ -16,16 +20,19 @@ public class Sign_upModel : PageModel
         
     }
 
-    public IActionResult OnPost()
+    
+
+    public async  Task<IActionResult> OnPost(Sign_upModel sign_UpModel)
     {
-        if (!ModelState.IsValid)
+        if (ModelState.IsValid)
         {
-            return Page();
+            var result = await _userService.CreateUserAsync(sign_UpModel.Form);
+            if (result.StatusCode == Infrastructure.Models.StatusCode.OK)
+                return RedirectToAction("/Sign-in");
+            
         }
-
-        // skicka iväg formuläret till en userService för registrering
-        // var result = _userService.SignInUser(From);
-
+     
         return RedirectToPage("/index");
     }
+  
 }

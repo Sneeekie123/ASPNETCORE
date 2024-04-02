@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApp_RazorPages.Models;
+namespace Infrastructure.Models;
 
-public class SignInFormModel
+public class SignInModel
 {
-
 
     [DataType(DataType.EmailAddress)]
     [Display(Name = "Email", Prompt = "Enter your email address")]
@@ -20,6 +19,6 @@ public class SignInFormModel
 
 
     [Display(Name = "Remember me")]
-   
+
     public bool RememberMe { get; set; } = false;
 }

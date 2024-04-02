@@ -1,14 +1,12 @@
-﻿
-using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using Infrastructure.Helpers;
 using System.ComponentModel.DataAnnotations;
-using WebApp_RazorPages.Helpers;
 
-namespace WebApp_RazorPages.Models;
+namespace Infrastructure.Models;
 
-public class SignUpFormModel
+public class SignUpModel
 {
     [DataType(DataType.Text)]
-    [Display(Name = "First name" , Prompt = "Enter your first name")]
+    [Display(Name = "First name", Prompt = "Enter your first name")]
     [Required(ErrorMessage = "Invalid first name")]
     [MinLength(2, ErrorMessage = "Enter your first name")]
     public string FirstName { get; set; } = null!;
@@ -47,8 +45,4 @@ public class SignUpFormModel
     [Display(Name = "I agree to the Terms & Conditions")]
     [CheckBoxRequired(ErrorMessage = "You must agree to the terms & conditions.")]
     public bool Terms { get; set; } = false;
-
-
 }
-
-
